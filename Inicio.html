@@ -4,27 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Formulario</title>
 <style>
-    label{
+    label {
+
         display: block;
         float: left;
         width: 70px;
-        
+
     }
 </style>
 </head>
 <body>
-<form action="">
+<form action=" ">
     <div>
-        <label for="Nombre">Nombre</label>
-        <input type ="text" id ='Nombre'>
+        <label for="nombre">nombre</label>
+        <input type ="text" id ='nombre'>
     </div>
     <div>
-        <label for="Password">Password</label>
-        <input type ="Password" id ='Password'>
+        <label for="password">password</label>
+        <input type ="password" id ='password'>
     </div>
+    <input type="submit" onclick = 'return EnviarFormulario();'  value = 'Enviar'>
 </form>
-    
+<div id = 'error'></div>
+<script src="Java.js"></script>
 </body>
 </html>
