@@ -3,6 +3,7 @@ var password = document.getElementById('password');
 var rut = document.getElementById('rut');
 var materno = document.getElementById('materno');
 var paterno = document.getElementById('paterno');
+var edad = document.getElementById('edad');
 var error = document.getElementById('error');
 error.style.color = 'red';
 
@@ -26,6 +27,14 @@ function EnviarFormulario() {
 
     if(paterno.value === null || paterno.value === ''){
         mensajesError.push('Ingresa Tu Apellido Paterno');
+    }
+
+    if(edad.value <=18){
+        mensajesError.push('tienes menos de 18 años');
+    }
+
+    if(edad.value >=35){
+        mensajesError.push('tienes menos de 35 años');
     }
 
     if(password.value === null || password.value === ''){
