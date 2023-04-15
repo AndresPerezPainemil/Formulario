@@ -1,5 +1,8 @@
 var nombre = document.getElementById('nombre');
 var password = document.getElementById('password');
+var rut = document.getElementById('rut');
+var materno = document.getElementById('materno');
+var paterno = document.getElementById('paterno');
 var error = document.getElementById('error');
 error.style.color = 'red';
 
@@ -8,8 +11,21 @@ function EnviarFormulario() {
 
     var mensajesError = [];
 
+    if(rut.value === null || rut.value === ''){
+        mensajesError.push('Ingresa Tu rut');
+    }
+
+
     if(nombre.value === null || nombre.value === ''){
         mensajesError.push('Ingresa Tu Nombre');
+    }
+
+    if(materno.value === null || materno.value === ''){
+        mensajesError.push('Ingresa Tu Apellido Materno');
+    }
+
+    if(paterno.value === null || paterno.value === ''){
+        mensajesError.push('Ingresa Tu Apellido Paterno');
     }
 
     if(password.value === null || password.value === ''){
